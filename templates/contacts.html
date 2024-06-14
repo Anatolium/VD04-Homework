@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Контакты</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+<nav>
+    <a href="{{ url_for('index') }}">Главная</a>
+    <a href="{{ url_for('blog') }}">Блог</a>
+    <a href="{{ url_for('contacts') }}">Контакты</a>
+</nav>
+<div class="container">
+    <h2>Контакты</h2>
+    <p>На данный момент живу и работаю в Пензе</p>
+    <div class="icons">
+        <a href="https://t.me/mlnpolina" target="_blank" rel="noopener noreferrer">
+            <img src="{{ url_for('static', filename='image/logo-Tg.png') }}" alt="Telegram" class="logo">
+        </a>
+        <a href="https://instagram.com/mlnpolina.ph?igshid=YzAyZWRlMzg=" target="_blank" rel="noopener noreferrer">
+            <img src="{{ url_for('static', filename='image/logo-Ig.png') }}" alt="Instagram" class="logo">
+        </a>
+        <a href="https://vk.com/mlnpolinaph" target="_blank" rel="noopener noreferrer">
+            <img src="{{ url_for('static', filename='image/logo-Vk.png') }}" alt="VK" class="logo">
+        </a>
+    </div>
+</div>
+</body>
+</html>
