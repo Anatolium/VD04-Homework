@@ -1,0 +1,22 @@
+body {
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    text-align: center;
+    position: relative;
+    top: 30px;
+}
+
+.date {
+    color: blue;
+    margin-bottom: 30px;
+}
+
+.time {
+    color: darkgreen;
+}

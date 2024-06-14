@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Дата и Время</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+<div class="container">
+    <h1 class="date">{{ date }}</h1>
+    <h1 class="time">{{ time }}</h1>
+</div>
+<script>
+    function updateTime() {
+        fetch('/time')
+            .then(response => response.json())
+            .then(data => {
+                document.querySelector('.time').textContent = data.time;
+            });
+    }
+    setInterval(updateTime, 1000);
+</script>
+</body>
+</html>
